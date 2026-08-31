@@ -1,12 +1,23 @@
 import HeroBanner from "./HeroBanner";
+import MonitoringSection from "./MonitoringSection";
+import StateProjects from "./StateProjects";
 
 const Home = () => {
   return (
-           <div className="lg:px-14 sm:px-8 px-4">
-            <div className="py-6">
-                <HeroBanner />
-            </div>
-            </div>
+    <main>
+
+      {/* Hero */}
+      <div className="px-4 py-6 sm:px-8 lg:px-14">
+        <HeroBanner />
+      </div>
+
+      {/* Ministry / Sector Monitoring */}
+      <MonitoringSection />
+
+      {/* State-wise Projects */}
+      <StateProjects />
+
+    </main>
   );
 };
 
