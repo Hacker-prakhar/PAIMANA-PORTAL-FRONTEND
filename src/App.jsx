@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/shared/Navbar";
 import { Toaster } from "react-hot-toast";
 import "./App.css";
+import { Login } from "./components/auth/Login";
+import { Register } from "./components/auth/Register";
 
 import Home from "./components/home/Home.jsx";
 import StateProjectExplorer from "./components/home/StateProjectExplorer.jsx";
@@ -16,14 +18,18 @@ function App() {
 
         <Routes>
 
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
-          <Route
-            path="/projects/:state"
-            element={<StateProjectExplorer />}
-          />
+        <Route path="/login" element={<Login />} />
 
-        </Routes>
+        <Route path="/register" element={<Register />} />
+
+        <Route
+          path="/projects/:state"
+          element={<StateProjectExplorer />}
+        />
+
+      </Routes>
 
       </Router>
 

@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <header className="w-full">
 
@@ -34,6 +37,7 @@ const Navbar = () => {
           {/* Right */}
           <div className="flex items-center gap-4">
             <button
+              onClick={() => navigate("/login")}
               className="
                 bg-orange
                 text-white
@@ -76,9 +80,12 @@ const Navbar = () => {
             gap-14
           "
         >
-          <a className="text-white font-semibold text-lg">
+          <button
+            onClick={() => navigate("/")}
+            className="text-white font-semibold text-lg hover:underline"
+          >
             Home
-          </a>
+          </button>
 
           <a className="text-white font-semibold text-lg">
             Publications
